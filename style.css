@@ -1,61 +1,105 @@
 body{
-    background-color:#000000;
-    color:#ffffff;
-    font-family:monospace;
-    margin:30px;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    color:#1f2937;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:40px;
+    line-height:1.6;
 }
 
+/* Título principal */
 h1{
-    color:#00ff00;
+    color:#4f46e5;
     text-align:center;
-    font-size:32px;
+    font-size:36px;
+    margin-bottom:25px;
+    text-shadow:0 2px 5px rgba(79,70,229,0.2);
 }
 
+/* Subtítulos */
 h2{
-    color:#00e5ff;
-    border-bottom:1px solid #00ff00;
-    padding-bottom:5px;
+    color:#7c3aed;
+    border-bottom:3px solid #c4b5fd;
+    padding-bottom:8px;
+    margin-top:30px;
 }
 
+/* Palabras clave */
 .clave{
-    color:#00e5ff;
+    color:#7c3aed;
     text-transform:uppercase;
+    font-weight:bold;
 }
 
+/* Enlaces */
 a{
-    color:#00e5ff;
+    color:#4f46e5;
     text-decoration:none;
+    font-weight:bold;
 }
 
 a:hover{
-    color:#00ff00;
+    color:#9333ea;
     text-decoration:underline;
 }
 
+/* Imágenes */
 img{
-    max-width:100%;
+    max-width:350px;
     height:auto;
-    border:2px solid #00ff00;
-    border-radius:8px;
+    border:4px solid white;
+    border-radius:20px;
     display:block;
-    margin:20px auto;
+    margin:25px auto;
+    box-shadow:0 8px 20px rgba(79,70,229,0.25);
 }
 
+/* Cajas de contenido */
 .caja{
-    border:1px solid #00ff00;
-    background-color:#07121d;
-    padding:15px;
+    background-color:white;
+    border:none;
+    border-radius:15px;
+    padding:20px;
     margin:20px 0;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* Rejilla */
 .grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:10px;
+    gap:20px;
 }
 
+/* Efecto para las cajas de la rejilla */
+.grid .caja{
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.grid .caja:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(124,58,237,0.2);
+}
+
+/* Listas */
+li{
+    margin:6px 0;
+}
+
+/* Adaptación para celulares */
 @media(max-width:700px){
+    body{
+        margin:20px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
     .grid{
         grid-template-columns:1fr;
+    }
+
+    img{
+        max-width:90%;
     }
 }
